@@ -24,11 +24,20 @@ public class Main {
         System.out.println("CD Library");
         System.out.println(myCD.toString());
 
+        if (myDVD.readDisc()) {
+            System.out.println("CD has been read");
+        }
+
+        if (myDVD.spinDisc()) {
+            System.out.println("CD is spinning");
+        }
+
+        if (myDVD.writeDisc()) {
+            System.out.println("CD has been written");
+        }
+
+        System.out.println("DVD Library");
+        System.out.println(myDVD.toString());
     }
 
-    @Override
-    public String toString() {
-        return "Name: " + myCD.getName() + "\n" + "Content: " + myCD.getContents() + "\n" + "Disc type: " +
-                myCD.getDiscType() + "\n" + "Content size: " + myCD.getContentSize();
-    }
 }
